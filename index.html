@@ -36,11 +36,11 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="data/Polygon_2.js"></script>
-        <script src="data/Jarpip_3.js"></script>
-        <script src="data/Accessories_4.js"></script>
-        <script src="data/SR_5.js"></script>
-        <script src="data/MAdanRES_6.js"></script>
+        <script src="data/Polygon_1.js"></script>
+        <script src="data/Jarpip_2.js"></script>
+        <script src="data/Accessories_3.js"></script>
+        <script src="data/SR_4.js"></script>
+        <script src="data/MAdanRES_5.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
@@ -60,7 +60,7 @@
         }
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[-7.380620113392555,109.90048161094286],[-7.3626804552392295,109.93691224561455]]);
+        }).fitBounds([[-7.377773593299326,109.90507962892612],[-7.359834313364419,109.94150988572638]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -121,20 +121,7 @@
         });
         layer_GoogleSatelliteHybrid_0;
         map.addLayer(layer_GoogleSatelliteHybrid_0);
-        map.createPane('pane_BingAerial_1');
-        map.getPane('pane_BingAerial_1').style.zIndex = 401;
-        var layer_BingAerial_1 = L.tileLayer('http://ak.t0.tiles.virtualearth.net/tiles/a{q}.jpeg?n=z&g=5880', {
-            pane: 'pane_BingAerial_1',
-            opacity: 1.0,
-            attribution: '',
-            minZoom: 1,
-            maxZoom: 28,
-            minNativeZoom: 0,
-            maxNativeZoom: 19
-        });
-        layer_BingAerial_1;
-        map.addLayer(layer_BingAerial_1);
-        function pop_Polygon_2(feature, layer) {
+        function pop_Polygon_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -176,7 +163,7 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        var pattern_Polygon_2_0 = new L.StripePattern({
+        var pattern_Polygon_1_0 = new L.StripePattern({
             weight: 0.3,
             spaceWeight: 2.0,
             color: '#001203',
@@ -184,19 +171,19 @@
             spaceOpacity: 0,
             angle: 315
         });
-        pattern_Polygon_2_0.addTo(map);
-        function style_Polygon_2_0() {
+        pattern_Polygon_1_0.addTo(map);
+        function style_Polygon_1_0() {
             return {
-                pane: 'pane_Polygon_2',
+                pane: 'pane_Polygon_1',
                 stroke: false,
                 fillOpacity: 1,
-                fillPattern: pattern_Polygon_2_0,
+                fillPattern: pattern_Polygon_1_0,
                 interactive: true,
             }
         }
-        function style_Polygon_2_1() {
+        function style_Polygon_1_1() {
             return {
-                pane: 'pane_Polygon_2',
+                pane: 'pane_Polygon_1',
                 opacity: 1,
                 color: 'rgba(0,18,3,1.0)',
                 dashArray: '',
@@ -207,21 +194,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Polygon_2');
-        map.getPane('pane_Polygon_2').style.zIndex = 402;
-        map.getPane('pane_Polygon_2').style['mix-blend-mode'] = 'normal';
-        var layer_Polygon_2 = new L.geoJson.multiStyle(json_Polygon_2, {
+        map.createPane('pane_Polygon_1');
+        map.getPane('pane_Polygon_1').style.zIndex = 401;
+        map.getPane('pane_Polygon_1').style['mix-blend-mode'] = 'normal';
+        var layer_Polygon_1 = new L.geoJson.multiStyle(json_Polygon_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Polygon_2',
-            layerName: 'layer_Polygon_2',
-            pane: 'pane_Polygon_2',
-            onEachFeature: pop_Polygon_2,
-            styles: [style_Polygon_2_0,style_Polygon_2_1,]
+            dataVar: 'json_Polygon_1',
+            layerName: 'layer_Polygon_1',
+            pane: 'pane_Polygon_1',
+            onEachFeature: pop_Polygon_1,
+            styles: [style_Polygon_1_0,style_Polygon_1_1,]
         });
-        bounds_group.addLayer(layer_Polygon_2);
-        map.addLayer(layer_Polygon_2);
-        function pop_Jarpip_3(feature, layer) {
+        bounds_group.addLayer(layer_Polygon_1);
+        map.addLayer(layer_Polygon_1);
+        function pop_Jarpip_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -275,11 +262,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Jarpip_3_0(feature) {
+        function style_Jarpip_2_0(feature) {
             switch(String(feature.properties['DN_PIPA'])) {
                 case '18':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(255,255,255,1.0)',
                 dashArray: '',
@@ -292,7 +279,7 @@
                     break;
                 case '25':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(85,255,255,1.0)',
                 dashArray: '',
@@ -305,7 +292,7 @@
                     break;
                 case '38':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(255,255,0,1.0)',
                 dashArray: '',
@@ -318,7 +305,7 @@
                     break;
                 case '50':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(255,0,0,1.0)',
                 dashArray: '',
@@ -331,7 +318,7 @@
                     break;
                 case '75':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(0,0,255,1.0)',
                 dashArray: '',
@@ -344,7 +331,7 @@
                     break;
                 case '100':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(0,75,0,1.0)',
                 dashArray: '',
@@ -357,7 +344,7 @@
                     break;
                 case '150':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(255,85,0,1.0)',
                 dashArray: '',
@@ -370,7 +357,7 @@
                     break;
                 case '200':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(255,0,255,1.0)',
                 dashArray: '',
@@ -383,7 +370,7 @@
                     break;
                 case '250':
                     return {
-                pane: 'pane_Jarpip_3',
+                pane: 'pane_Jarpip_2',
                 opacity: 1,
                 color: 'rgba(40,166,244,1.0)',
                 dashArray: '',
@@ -396,21 +383,21 @@
                     break;
             }
         }
-        map.createPane('pane_Jarpip_3');
-        map.getPane('pane_Jarpip_3').style.zIndex = 403;
-        map.getPane('pane_Jarpip_3').style['mix-blend-mode'] = 'normal';
-        var layer_Jarpip_3 = new L.geoJson(json_Jarpip_3, {
+        map.createPane('pane_Jarpip_2');
+        map.getPane('pane_Jarpip_2').style.zIndex = 402;
+        map.getPane('pane_Jarpip_2').style['mix-blend-mode'] = 'normal';
+        var layer_Jarpip_2 = new L.geoJson(json_Jarpip_2, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Jarpip_3',
-            layerName: 'layer_Jarpip_3',
-            pane: 'pane_Jarpip_3',
-            onEachFeature: pop_Jarpip_3,
-            style: style_Jarpip_3_0,
+            dataVar: 'json_Jarpip_2',
+            layerName: 'layer_Jarpip_2',
+            pane: 'pane_Jarpip_2',
+            onEachFeature: pop_Jarpip_2,
+            style: style_Jarpip_2_0,
         });
-        bounds_group.addLayer(layer_Jarpip_3);
-        map.addLayer(layer_Jarpip_3);
-        function pop_Accessories_4(feature, layer) {
+        bounds_group.addLayer(layer_Jarpip_2);
+        map.addLayer(layer_Jarpip_2);
+        function pop_Accessories_3(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -476,11 +463,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Accessories_4_0(feature) {
+        function style_Accessories_3_0(feature) {
             switch(String(feature.properties['NAMA'])) {
                 case 'AIR VALVE':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -496,7 +483,7 @@
                     break;
                 case 'GATE VALVE':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -512,7 +499,7 @@
                     break;
                 case 'LOGGER':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -528,7 +515,7 @@
                     break;
                 case 'LOGGER FLOW':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -544,7 +531,7 @@
                     break;
                 case 'LOGGER PRESSURE':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -560,7 +547,7 @@
                     break;
                 case 'PRV':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -576,7 +563,7 @@
                     break;
                 case 'PSV':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -592,7 +579,7 @@
                     break;
                 case 'WASHOUT':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -608,7 +595,7 @@
                     break;
                 case 'Water Meter':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -624,7 +611,7 @@
                     break;
                 case 'WATER METER':
                     return {
-                pane: 'pane_Accessories_4',
+                pane: 'pane_Accessories_3',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -640,27 +627,27 @@
                     break;
             }
         }
-        map.createPane('pane_Accessories_4');
-        map.getPane('pane_Accessories_4').style.zIndex = 404;
-        map.getPane('pane_Accessories_4').style['mix-blend-mode'] = 'normal';
-        var layer_Accessories_4 = new L.geoJson(json_Accessories_4, {
+        map.createPane('pane_Accessories_3');
+        map.getPane('pane_Accessories_3').style.zIndex = 403;
+        map.getPane('pane_Accessories_3').style['mix-blend-mode'] = 'normal';
+        var layer_Accessories_3 = new L.geoJson(json_Accessories_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Accessories_4',
-            layerName: 'layer_Accessories_4',
-            pane: 'pane_Accessories_4',
-            onEachFeature: pop_Accessories_4,
+            dataVar: 'json_Accessories_3',
+            layerName: 'layer_Accessories_3',
+            pane: 'pane_Accessories_3',
+            onEachFeature: pop_Accessories_3,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_Accessories_4_0(feature));
+                return L.circleMarker(latlng, style_Accessories_3_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Accessories_4);
-        map.addLayer(layer_Accessories_4);
-        function pop_SR_5(feature, layer) {
+        bounds_group.addLayer(layer_Accessories_3);
+        map.addLayer(layer_Accessories_3);
+        function pop_SR_4(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -729,11 +716,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_SR_5_0(feature) {
+        function style_SR_4_0(feature) {
             switch(String(feature.properties['DMA'])) {
                 case '0':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -749,7 +736,7 @@
                     break;
                 case 'DMA Kaliyoga':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -765,7 +752,7 @@
                     break;
                 case 'DMA Kramatan':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -781,7 +768,7 @@
                     break;
                 case 'DMA Larangan':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -797,7 +784,7 @@
                     break;
                 case 'DMA Sariyoso SUB ASABRI':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -813,7 +800,7 @@
                     break;
                 case 'DMA Serba Kriwil':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -829,7 +816,7 @@
                     break;
                 case 'DMA Tenda Biru':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -845,7 +832,7 @@
                     break;
                 case 'DMA Tenda Biru SUB Brokoh':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -861,7 +848,7 @@
                     break;
                 case 'GV Bu Yuyun':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -877,7 +864,7 @@
                     break;
                 case 'GV INUN':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -893,7 +880,7 @@
                     break;
                 case 'NON DMA':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -909,7 +896,7 @@
                     break;
                 case 'SUB DMA Sariyoso':
                     return {
-                pane: 'pane_SR_5',
+                pane: 'pane_SR_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -925,27 +912,27 @@
                     break;
             }
         }
-        map.createPane('pane_SR_5');
-        map.getPane('pane_SR_5').style.zIndex = 405;
-        map.getPane('pane_SR_5').style['mix-blend-mode'] = 'normal';
-        var layer_SR_5 = new L.geoJson(json_SR_5, {
+        map.createPane('pane_SR_4');
+        map.getPane('pane_SR_4').style.zIndex = 404;
+        map.getPane('pane_SR_4').style['mix-blend-mode'] = 'normal';
+        var layer_SR_4 = new L.geoJson(json_SR_4, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_SR_5',
-            layerName: 'layer_SR_5',
-            pane: 'pane_SR_5',
-            onEachFeature: pop_SR_5,
+            dataVar: 'json_SR_4',
+            layerName: 'layer_SR_4',
+            pane: 'pane_SR_4',
+            onEachFeature: pop_SR_4,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_SR_5_0(feature));
+                return L.circleMarker(latlng, style_SR_4_0(feature));
             },
         });
-        bounds_group.addLayer(layer_SR_5);
-        map.addLayer(layer_SR_5);
-        function pop_MAdanRES_6(feature, layer) {
+        bounds_group.addLayer(layer_SR_4);
+        map.addLayer(layer_SR_4);
+        function pop_MAdanRES_5(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (var i in e.target._eventParents) {
@@ -1011,11 +998,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_MAdanRES_6_0(feature) {
+        function style_MAdanRES_5_0(feature) {
             switch(String(feature.properties['NAMA'])) {
                 case 'MATA AIR KALIYOGA':
                     return {
-                pane: 'pane_MAdanRES_6',
+                pane: 'pane_MAdanRES_5',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -1031,7 +1018,7 @@
                     break;
                 case 'MATA AIR SIBENDO':
                     return {
-                pane: 'pane_MAdanRES_6',
+                pane: 'pane_MAdanRES_5',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -1047,7 +1034,7 @@
                     break;
                 case 'MATA AIR SIGAJAH':
                     return {
-                pane: 'pane_MAdanRES_6',
+                pane: 'pane_MAdanRES_5',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -1063,7 +1050,7 @@
                     break;
                 case 'RESERVOAR':
                     return {
-                pane: 'pane_MAdanRES_6',
+                pane: 'pane_MAdanRES_5',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -1079,34 +1066,34 @@
                     break;
             }
         }
-        map.createPane('pane_MAdanRES_6');
-        map.getPane('pane_MAdanRES_6').style.zIndex = 406;
-        map.getPane('pane_MAdanRES_6').style['mix-blend-mode'] = 'normal';
-        var layer_MAdanRES_6 = new L.geoJson(json_MAdanRES_6, {
+        map.createPane('pane_MAdanRES_5');
+        map.getPane('pane_MAdanRES_5').style.zIndex = 405;
+        map.getPane('pane_MAdanRES_5').style['mix-blend-mode'] = 'normal';
+        var layer_MAdanRES_5 = new L.geoJson(json_MAdanRES_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_MAdanRES_6',
-            layerName: 'layer_MAdanRES_6',
-            pane: 'pane_MAdanRES_6',
-            onEachFeature: pop_MAdanRES_6,
+            dataVar: 'json_MAdanRES_5',
+            layerName: 'layer_MAdanRES_5',
+            pane: 'pane_MAdanRES_5',
+            onEachFeature: pop_MAdanRES_5,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_MAdanRES_6_0(feature));
+                return L.circleMarker(latlng, style_MAdanRES_5_0(feature));
             },
         });
-        bounds_group.addLayer(layer_MAdanRES_6);
-        map.addLayer(layer_MAdanRES_6);
+        bounds_group.addLayer(layer_MAdanRES_5);
+        map.addLayer(layer_MAdanRES_5);
         setBounds();
         var i = 0;
-        layer_Polygon_2.eachLayer(function(layer) {
+        layer_Polygon_1.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['DUSUN'] !== null?String('<div style="color: #f60f2e; font-size: 10pt; font-weight: bold; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['DUSUN']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Polygon_2'});
+            layer.bindTooltip((layer.feature.properties['DUSUN'] !== null?String('<div style="color: #f60f2e; font-size: 10pt; font-weight: bold; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['DUSUN']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Polygon_1'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1114,12 +1101,12 @@
               i++;
         });
         var i = 0;
-        layer_Accessories_4.eachLayer(function(layer) {
+        layer_Accessories_3.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['NAMA'] !== null?String('<div style="color: #000000; font-size: 8pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['NAMA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Accessories_4'});
+            layer.bindTooltip((layer.feature.properties['NAMA'] !== null?String('<div style="color: #000000; font-size: 8pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['NAMA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_Accessories_3'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1127,12 +1114,12 @@
               i++;
         });
         var i = 0;
-        layer_SR_5.eachLayer(function(layer) {
+        layer_SR_4.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['NAMA'] !== null?String('<div style="color: #000000; font-size: 6pt; font-weight: bold; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['NAMA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_SR_5'});
+            layer.bindTooltip((layer.feature.properties['NAMA'] !== null?String('<div style="color: #000000; font-size: 6pt; font-weight: bold; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['NAMA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_SR_4'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
@@ -1140,27 +1127,27 @@
               i++;
         });
         var i = 0;
-        layer_MAdanRES_6.eachLayer(function(layer) {
+        layer_MAdanRES_5.eachLayer(function(layer) {
             var context = {
                 feature: layer.feature,
                 variables: {}
             };
-            layer.bindTooltip((layer.feature.properties['NAMA'] !== null?String('<div style="color: #f40000; font-size: 10pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['NAMA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_MAdanRES_6'});
+            layer.bindTooltip((layer.feature.properties['NAMA'] !== null?String('<div style="color: #f40000; font-size: 10pt; font-family: \'MS Shell Dlg 2\', sans-serif;">' + layer.feature.properties['NAMA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_MAdanRES_5'});
             labels.push(layer);
             totalMarkers += 1;
               layer.added = true;
               addLabel(layer, i);
               i++;
         });
-        resetLabels([layer_Polygon_2,layer_Accessories_4,layer_SR_5,layer_MAdanRES_6]);
+        resetLabels([layer_Polygon_1,layer_Accessories_3,layer_SR_4,layer_MAdanRES_5]);
         map.on("zoomend", function(){
-            resetLabels([layer_Polygon_2,layer_Accessories_4,layer_SR_5,layer_MAdanRES_6]);
+            resetLabels([layer_Polygon_1,layer_Accessories_3,layer_SR_4,layer_MAdanRES_5]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Polygon_2,layer_Accessories_4,layer_SR_5,layer_MAdanRES_6]);
+            resetLabels([layer_Polygon_1,layer_Accessories_3,layer_SR_4,layer_MAdanRES_5]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Polygon_2,layer_Accessories_4,layer_SR_5,layer_MAdanRES_6]);
+            resetLabels([layer_Polygon_1,layer_Accessories_3,layer_SR_4,layer_MAdanRES_5]);
         });
         </script>
     </body>
